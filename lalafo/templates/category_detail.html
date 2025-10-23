@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}{{ category.category_name }}{% endblock %}
+{% block content %}
+<div class="container">
+  <h1>{{ category.category_name }}</h1>
+
+  {% if category.category_photo %}
+    <img src="{{ category.category_photo.url }}" alt="{{ category.category_name }}" width="400">
+  {% endif %}
+
+  <p><strong>Description:</strong> {{ category.category_name }}</p>
+
+  <a href="{% url 'categories_list' %}" class="btn back-link">Back to Categories</a>
+</div>
+{% endblock %}

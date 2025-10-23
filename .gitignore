@@ -1,0 +1,4 @@
+# All env files
+*.env
+# Environment variables
+.env
